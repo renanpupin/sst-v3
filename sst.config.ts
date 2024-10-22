@@ -1,6 +1,6 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
-import {gatewayApi} from "./cloud";
+// import {gatewayApi, coreApi} from "./cloud";
 
 export default $config({
   app(input) {
@@ -11,10 +11,13 @@ export default $config({
     };
   },
   async run() {
-    const api = gatewayApi()
+    // const gatewayApi = gatewayApi()
+    // const coreApi = coreApi()
+    const cloud = await import("./cloud")
 
     return {
-      gatewayApi: api.url,
+      gatewayApi: cloud.gatewayApi().url,
+      coreApi: cloud.coreApi().url,
     };
   },
 });

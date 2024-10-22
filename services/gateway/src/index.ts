@@ -1,7 +1,8 @@
-export async function handler() {
+import { hello } from "@sst-v3/core/utils";
 
+export async function handler() {
     return {
         statusCode: 200,
-        body: "Success!!!",
+        body: `Success gateway!!! ${hello()}`,
     };
 }

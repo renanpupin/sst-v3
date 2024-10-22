@@ -6,7 +6,11 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "MyApi": {
+    "CoreApi": {
+      "type": "sst.aws.ApiGatewayV2"
+      "url": string
+    }
+    "GatewayApi": {
       "type": "sst.aws.ApiGatewayV2"
       "url": string
     }
