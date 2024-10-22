@@ -9,7 +9,7 @@
 export const gatewayApi = () => {
     const api = new sst.aws.ApiGatewayV2("MyApi");
     api.route("GET /", {
-        handler: "src/index.handler",
+        handler: "services/gateway/src/index.handler",
     });
     return api
 }

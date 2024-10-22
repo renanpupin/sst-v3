@@ -14,7 +14,7 @@ export default $config({
     const api = gatewayApi()
 
     return {
-      api: api.url,
+      gatewayApi: api.url,
     };
   },
 });
