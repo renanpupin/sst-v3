@@ -12,7 +12,7 @@ export const gatewayApi = () => {
             route: {
                 handler: (args, opts) => {
                     // Set the default if it's not set by the route
-                    args.timeout ??= "30 seconds";
+                    args.timeout ??= "15 seconds";
                     // args.memory ??= "2048 MB";
                 }
             }
