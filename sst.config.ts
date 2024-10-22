@@ -45,6 +45,9 @@ export default $config({
 
     const cloud = await import("./cloud")
 
+    // https://github.com/sst/sst/blob/dev/examples/aws-prisma/sst.config.ts
+    // https://github.com/sst/sst/blob/dev/examples/aws-dead-letter-queue/sst.config.ts
+
     return {
       gatewayApi: cloud.gatewayApi().url,
       coreApi: cloud.coreApi().url,
