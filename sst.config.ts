@@ -1,5 +1,7 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
+import {gatewayApi} from "./cloud";
+
 export default $config({
   app(input) {
     return {
@@ -8,5 +10,11 @@ export default $config({
       home: "aws",
     };
   },
-  async run() {},
+  async run() {
+    const api = gatewayApi()
+
+    return {
+      api: api.url,
+    };
+  },
 });
